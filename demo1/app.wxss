@@ -1,4 +1,7 @@
 /**app.wxss**/
+text{
+  font-family:  'Hiragino Sans GB';
+}
 .container {
   height: 100%;
   display: flex;

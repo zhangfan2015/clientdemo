@@ -4,7 +4,8 @@
     "pages/index1/index1",
     "pages/index2/index2",
     "pages/index3/index3",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/myCourt/myCourt"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -26,7 +27,7 @@
       "text": "商品demo"
       
     }, {
-      "pagePath": "pages/index2/index2",
+      "pagePath": "pages/myCourt/myCourt",
       "iconPath": "pages/image/wechat.png",
       "selectedIconPath": "pages/image/wechatHL.png",
       "text": "今日课程demo"
