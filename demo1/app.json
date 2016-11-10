@@ -5,7 +5,8 @@
     "pages/index2/index2",
     "pages/index3/index3",
     "pages/logs/logs",
-    "pages/myCourt/myCourt"
+    "pages/myCourt/myCourt",
+    "pages/checkinLog/checkinLog"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -21,7 +22,7 @@
 
 
     "list": [{
-      "pagePath": "pages/index1/index1",
+      "pagePath": "pages/index2/index2",
       "iconPath": "pages/image/wechat.png",
       "selectedIconPath": "pages/image/wechatHL.png",
       "text": "商品demo"

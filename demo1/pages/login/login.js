@@ -10,7 +10,7 @@ Page({
   bindViewTap: function() {
     
     wx.navigateTo({
-      url: '../index1/index1'
+      url: '../index2/index2'
     })
   },
   onLoad: function () {

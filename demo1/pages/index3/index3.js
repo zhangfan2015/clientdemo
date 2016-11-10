@@ -1,5 +1,6 @@
 var sourceType = [ ['camera'], ['album'], ['camera', 'album'] ]
 var sizeType = [ ['compressed'], ['original'], ['compressed', 'original'] ]
+var app = getApp()
 
 Page({
   data: {
@@ -24,7 +25,9 @@ Page({
     countIndex: 0,
     count: [1, 2, 3, 4, 5, 6, 7, 8, 9],
 
-    addImage:true
+    addImage:false,
+    minusImage:true
+  
   },
   countryTypeChange: function (e) {
     this.setData({
@@ -61,7 +64,20 @@ Page({
       countIndex: e.detail.value
     })
   },
-  chooseImage: function () {
+  addImage: function (e) {
+    
+      this.setData({
+        minusImage:false,
+      }) 
+    
+    if(this.data.imageList&&this.data.imageList.length>=6){
+      this.setData({
+        addImage:true,
+      }) 
+    }
+
+
+
     var that = this
     wx.chooseImage({
       sourceType: sourceType[this.data.sourceTypeIndex],
@@ -71,8 +87,6 @@ Page({
         console.log(res)
         var imageList = that.data.imageList;
         if(imageList){
-            if(imageList.length==4){
-              return;}
             Array.prototype.push.apply(imageList, res.tempFilePaths);
         }else{
           imageList=res.tempFilePaths;
@@ -97,10 +111,6 @@ Page({
             
           })
         
-
-
-
-
       }
 
 
@@ -110,6 +120,18 @@ Page({
 
     })
   },
+  minusImage:function(e){
+    if(this.data.imageList.length==1){
+      this.setData({
+        minusImage:true
+      })  
+    }
+    var imageList=this.data.imageList.slice(0,this.data.imageList.length-1);
+    this.setData({
+      addImage:false,
+      imageList:imageList
+    })
+  },
   previewImage: function (e) {
     var current = e.target.dataset.src
     console.log("------------------:"+current);
@@ -117,6 +139,34 @@ Page({
       current: current,
       urls: this.data.imageList
     })
+  },
+  onLoad: function (e) {
+    console.log('onLoad')
+    var that = this
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function(userInfo){
+      //更新数据
+      that.setData({
+        userInfo:userInfo
+      })
+    })
+  },
+  submit:function(e){
+    wx.showToast({
+      title: '注册成功',
+      icon: 'success',
+      duration: 2000,
+      success: function(res) {
+        if (true) {
+          setTimeout(function(){
+            wx.navigateTo({
+              url: '../index2/index2'
+            })
+          },1000)    
+        }
+      }
+    })
+    
   }
 
 })

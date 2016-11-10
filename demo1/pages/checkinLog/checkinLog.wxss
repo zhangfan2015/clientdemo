@@ -1,0 +1,102 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;background-color: #f3f4f9;
+} 
+.topContent{
+    width: 95%;
+    margin: 0 auto 50rpx;
+    background-color: white;
+    border-radius: 20rpx;
+}
+.topContent-title{
+    flex-direction:row;
+    display:flex;
+}
+.topContent-title-head{
+    margin-top: 70rpx;
+    margin-left: 50rpx;
+    width: 20%;
+    height: 120rpx;
+}
+.topContent-title-info{
+    margin-top: 50rpx;
+    flex-direction:column;
+    display:flex;
+    
+}
+.font1{
+    font-size: 30rpx;
+}
+.font2{
+    font-size: 26rpx;
+    color: gray
+}
+.bodyContent-dqqd{
+    width: 100%;
+    margin: 20rpx 40rpx 20rpx 20rpx;
+}
+.font3{
+    
+}
+
+.topContent-statictis{
+    flex-direction: row;
+    display: flex;
+    font-size: 26rpx;
+    color: cornflowerblue;
+}
+.statictis{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 50rpx;
+}
+
+.bodyContent{
+    width: 95%;
+    background-color: white;
+}
+
+
+.depart-line{
+    display: block;
+    height: 1rpx;
+    width: 100%;
+}
+.bodyContent-column{
+    flex-direction: row;
+    display: flex;
+    margin-top: 40rpx;
+    margin-bottom: 20rpx;
+}
+.grid-info-scroll{
+  width: 100%;
+  height:720rpx;
+}
+.bodyContent-row{
+    flex-direction: row;
+    display: flex;
+    margin: 20rpx;
+}
+.column{
+    width: 20%;
+    text-align: center;
+    font-size: 25rpx;
+    color: gray;
+}
+.checkin{
+    color: lightseagreen;
+}
+.late{
+    color: sandybrown
+}
+.Absent{
+    color: red;
+}
+.leave{
+    color: cornflowerblue;
+}
