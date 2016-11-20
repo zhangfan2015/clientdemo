@@ -34,5 +34,9 @@ Page({
     this.setData({
       date: month
     })
+  },
+  courtClick:function(e) {
+    console.log(e);
+    e.target.offsetLeft = 100;
   }
 })

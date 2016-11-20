@@ -41,22 +41,34 @@
   <scroll-view scroll-y="true" class="court-info-scroll"  bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <view class="court-container">
       <view class="court-sort">
-        <view class="court-sort-content">
+        <view class="court-sort-content-sel">
           <text>1~2</text>
         </view>
         <view class="court-sort-line"></view>
       </view>
-      <view class="court-info">
-        <view class="court-info-name">
+      <view class="court-info-selected" bindtap="courtClick">
+        <view class="court-info-name-sel">
           <text>课程名称</text>
         </view>
-        <view class="court-info-addr">
-          <view class="court-info-iaddr"></view>
+        <view class="court-info-addr-sel">
+          <view class="court-info-iaddr-sel"></view>
           <text>A210</text>
         </view>
         <image src="/pages/image/icon-line1.png" class="court-info-line"/>
-        <view class="court-info-time">
-          <view class="court-info-clock"/>
+        <view class="court-info-default-sel">
+          <text>教师名称：</text>
+          <text>张三</text>
+        </view>
+        <view class="court-info-default-sel">
+          <text>考试时间：</text>
+          <text>6月17日 9:00~11:00</text>
+        </view>
+        <view class="court-info-default-sel">
+          <text>上课周次：</text>
+          <text>1~2周 3~4周 7~8周</text>
+        </view>
+        <view class="court-info-time-sel">
+          <view class="court-info-clock-sel"/>
           <text>10:30~11:50</text>
         </view>
       </view>
@@ -69,18 +81,30 @@
         </view>
         <view class="court-sort-line"></view>
       </view>
-      <view class="court-info">
+      <view class="court-info" bindtap="courtClick">
         <view class="court-info-name">
           <text>课程名称</text>
         </view>
         <view class="court-info-addr">
           <view class="court-info-iaddr"></view>
-          <text>A110</text>
+          <text>A210</text>
         </view>
         <image src="/pages/image/icon-line1.png" class="court-info-line"/>
+        <view class="court-info-default">
+          <text>教师名称：</text>
+          <text>张三</text>
+        </view>
+        <view class="court-info-default">
+          <text>考试时间：</text>
+          <text>6月17日 9:00~11:00</text>
+        </view>
+        <view class="court-info-default">
+          <text>上课周次：</text>
+          <text>1~2周 3~4周 7~8周</text>
+        </view>
         <view class="court-info-time">
           <view class="court-info-clock"/>
-          <text>1:30~2:50</text>
+          <text>10:30~11:50</text>
         </view>
       </view>
     </view>
