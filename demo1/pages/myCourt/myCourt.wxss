@@ -1,100 +1,4 @@
-.date{
-  width:100%;
-  height: 108px;
-  background-color: white;
-  margin-bottom:10px;
-}
-.date-icon {
-  width:10px;
-  height:6px;
-  margin-left:2px;
-}
-.content{
-  background-color: #f3f4f9;
-}
-.month {
-  text-align:center;
-  font-size: 14px;
-  height:48px;
-  line-height: 48px;
-  width:100%;
-  color:#5c6b71;
-  display:block;
-  font-weight: 600;
-}
-@media screen and (min-width:375px) {
-  .calendar-width,.calendar {
-    width:397px;
-  }
-  .calendar-container {
-    margin-right: 24px;
-  }
-}
-@media screen and (max-width:375px) {
-    .calendar-width,.calendar {
-    width:360px;
-    
-  }
-  .calendar-container {
-    margin-right: 18px;
-  }
-}
-@media screen and (max-width:384px)  and (min-width:376px)  {
-    .calendar-width,.calendar {
-    width:369px;
-    
-  }
-  .calendar-container {
-    margin-right: 19.5px;
-  }
-}
-@media screen and (max-width:360px) {
-    .calendar-width,.calendar {
-    width:345px;
-    
-  }
-  .calendar-container {
-    margin-right: 15.5px;
-  }
-}
-@media screen and (max-width:320px) {
-  .calendar-width,.calendar {
-    width:304px;
-  }
-  .calendar-container {
-    margin-right: 8.5px;
-  }
-}
-.calendar {
-  margin:0 auto;
-}
-.calendar-container,.calendar-container-last {
-  display: inline-block;
-}
-.calendar-week {
-  display: block;
-  width:36px;
-  font-size:12px;
-  height:16px;
-  color:#cccccc;
-  text-align: center;
-}
-.calendar-day,.calendar-day-selected {
-  display: block;
-  width:36px;
-  height:36px;
-  font-size:14px;
-  color:#5c6b71;
-  text-align: center;
-  line-height: 36px;
-}
-.calendar-day-selected {
-  color:white;
-  background-image:url(http://ogkcxvdnd.bkt.clouddn.com/images/day-selected.png?v=20161113);
-}
-/*.court-container {
-  padding:0px 10px 0px 10px;
-}*/
+@import "/common/calendar.wxss";
 .court-info,.court-sort,.court-info-selected {
   display: inline-block;
 }
@@ -121,73 +25,18 @@
   padding-bottom:132px;
   width: 1px;
   margin:0 auto;
-  background: url(http://ogkcxvdnd.bkt.clouddn.com/images/sort-line1.png?v=20161113) center;
+  background: url(http://ogkcxvdnd.bkt.clouddn.com/images/icon-line1.png?v=20161113) center;
 }
 .court-info,.court-info-selected {
     width:78%;
   }
   .court-info-line {
-    width:90%;
+    width:93%;
   }
-/*iphone6plus*/
-@media screen and (max-height:740px) {
-  .court-info-scroll {
-    height:462px;
+
+.court-info-scroll {
+    height:81%;
   }
-  
-}
-/*iphone6*/
-/*@media screen and (max-height:670px) {
-  .court-info-scroll {
-    height:396px;
-  }
-  .court-info,.court-info-selected {
-    width:300px;
-  }
-  .court-info-line {
-    width:280px;
-  }
-}*/
-/*@media screen and (max-width:384px) and (min-width:376px) {
-  .court-info-scroll {
-    height:368px;
-  }
-  .court-info,.court-info-selected {
-    width:309px;
-  }
-  .court-info-line {
-    width:289px;
-  }
-}
-@media screen and (max-width:360px) {
-  .court-info-scroll {
-    height:368px;
-  }
-  .court-info,.court-info-selected {
-    width:285px;
-  }
-  .court-info-line {
-    width:265px;
-  }
-}
-@media screen and (max-width:320px) {
-  @media screen and (min-height:481px) {
-    .court-info-scroll {
-      height:296px;
-    }
-  }
-  @media screen and (max-height:480px) {
-    .court-info-scroll {
-      height:208px;
-    }
-  }
-  .court-info,.court-info-selected {
-    width:245px;
-  }
-  .court-info-line {
-    width:225px;
-  }
-}*/
 .court-info,.court-info-selected {
   height:160px;
   border-radius: 5px;
@@ -205,6 +54,12 @@
   height:34px;
   line-height: 34px;
   color:#5c6b71;
+}
+.court-info-name,.court-info-name-sel {
+  width:50%;
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+  overflow: hidden;
 }
 .court-info-name-sel,.court-info-addr-sel {
   color:white;

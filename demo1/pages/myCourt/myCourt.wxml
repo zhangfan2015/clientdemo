@@ -9,37 +9,73 @@
         <view class="calendar">
             <view class="calendar-container">
               <text class="calendar-week">一</text>
-              <text class="calendar-day">10</text>
+              <text class="{{dayArr[0].css}}">{{dayArr[0].day}}</text>
             </view>
             <view class="calendar-container">
               <text class="calendar-week">二</text>
-              <text class="calendar-day">11</text>
+              <text class="{{dayArr[1].css}}">{{dayArr[1].day}}</text>
             </view>
             <view class="calendar-container">
               <text class="calendar-week">三</text>
-              <text class="calendar-day-selected">12</text>
+              <text class="{{dayArr[2].css}}">{{dayArr[2].day}}</text>
             </view>
             <view class="calendar-container">
               <text class="calendar-week">四</text>
-              <text class="calendar-day">13</text>
+              <text class="{{dayArr[3].css}}">{{dayArr[3].day}}</text>
             </view>
             <view class="calendar-container">
               <text class="calendar-week">五</text>
-              <text class="calendar-day">14</text>
+              <text class="{{dayArr[4].css}}">{{dayArr[4].day}}</text>
             </view>
             <view class="calendar-container">
               <text class="calendar-week">六</text>
-              <text class="calendar-day">15</text>
+              <text class="{{dayArr[5].css}}">{{dayArr[5].day}}</text>
             </view>
             <view class="calendar-container-last">
               <text class="calendar-week">日</text>
-              <text class="calendar-day">17</text>
+              <text class="{{dayArr[6].css}}">{{dayArr[6].day}}</text>
             </view>
         </view>
     </view>
   </view>
-  <scroll-view scroll-y="true" class="court-info-scroll"  bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-    <view class="court-container">
+  <scroll-view scroll-y="true" class="court-info-scroll"  bindscrolltolower="lower" bindscroll="scroll" >
+    <block wx:for="{{courtArr}}">
+      <view class="court-container">
+      <view class="court-sort">
+        <view class="{{item.state ==1?'court-sort-content-sel':'court-sort-content'}}">
+          <text>{{item.courtSort}}</text>
+        </view>
+        <view class="court-sort-line" style="{{item.last?'display:none;':''}}"></view>
+      </view>
+      <view class="{{item.state ==1?'court-info-selected':'court-info'}}" bindtap="courtClick">
+        <view class="{{item.state ==1?'court-info-name-sel':'court-info-name'}}">
+          <text>{{item.courtName}}</text>
+        </view>
+        <view class="{{item.state ==1?'court-info-addr-sel':'court-info-addr'}}">
+          <view class="{{item.state ==1?'court-info-iaddr-sel':'court-info-iaddr'}}"></view>
+          <text>{{item.address}}</text>
+        </view>
+        <image src="/pages/image/icon-line1.png" class="court-info-line"/>
+        <view class="{{item.state ==1?'court-info-default-sel':'court-info-default'}}">
+          <text>教师名称：</text>
+          <text>{{item.teacherName}}</text>
+        </view>
+        <view class="{{item.state ==1?'court-info-default-sel':'court-info-default'}}">
+          <text>考试时间：</text>
+          <text>{{item.testTime}}</text>
+        </view>
+        <view class="{{item.state ==1?'court-info-default-sel':'court-info-default'}}">
+          <text>上课周次：</text>
+          <text>{{item.courtWeek}}</text>
+        </view>
+        <view class="{{item.state ==1?'court-info-time-sel':'court-info-time'}}">
+          <view class="{{item.state ==1?'court-info-clock-sel':'court-info-clock'}}"/>
+          <text>{{item.courtTime}}</text>
+        </view>
+      </view>
+    </view>
+    </block>
+    <!--<view class="court-container">
       <view class="court-sort">
         <view class="court-sort-content-sel">
           <text>1~2</text>
@@ -173,7 +209,7 @@
           <text>1:30~2:50</text>
         </view>
       </view>
-    </view>
+    </view>-->
   </scroll-view>
   
 </view>

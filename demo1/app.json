@@ -1,42 +1,38 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/index1/index1",
-    "pages/index2/index2",
-    "pages/index3/index3",
-    "pages/logs/logs",
     "pages/myCourt/myCourt",
-    "pages/checkinLog/checkinLog"
+    "pages/leave/leave",
+    "pages/personal/personal",
+    "pages/logs/logs",
+    "pages/signIn/signIn"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "小程序演示",
+    "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#fbf9fe",
     "backgroundColor": "#fbf9fe"
   },
   "tabBar": {
     "color": "#dddddd",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#39cafe",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-
-
     "list": [{
-      "pagePath": "pages/index2/index2",
-      "iconPath": "pages/image/wechat.png",
-      "selectedIconPath": "pages/image/wechatHL.png",
-      "text": "商品demo"
+      "pagePath": "pages/myCourt/myCourt",
+      "iconPath": "pages/image/my-court.png",
+      "selectedIconPath": "pages/image/my-court-sel.png",
+      "text": "我的课程"
       
     }, {
-      "pagePath": "pages/myCourt/myCourt",
-      "iconPath": "pages/image/wechat.png",
-      "selectedIconPath": "pages/image/wechatHL.png",
-      "text": "今日课程demo"
+      "pagePath": "pages/leave/leave",
+      "iconPath": "pages/image/leave.png",
+      "selectedIconPath": "pages/image/leave-sel.png",
+      "text": "请假"
     }, {
-      "pagePath": "pages/index3/index3",
-      "iconPath": "pages/image/wechat.png",
-      "selectedIconPath": "pages/image/wechatHL.png",
-      "text": "注册"
+      "pagePath": "pages/personal/personal",
+      "iconPath": "pages/image/person-center.png",
+      "selectedIconPath": "pages/image/person-center-sel.png",
+      "text": "个人中心"
     }]
   },
   "networkTimeout": {
